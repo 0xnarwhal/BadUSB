@@ -84,9 +84,9 @@ nc -lnvp 4444
 
 From here you can perform tasks just as any other reverse shell. There are some additional commands as well:
 
-1. screenshot (Returns a Base64 encoding of their screenshot. Pipe the output into a file and use `./exfiltrated_data/reverse_shell/Base62_Decoder.sh` to decode the files.)
-2. transfer (Similar to `screenshot` but transfers files. Must use absolute path.)
-3. rm-all (Removes connection and deletes all files. Leaving no trace.)
+1. `screenshot` (Returns a Base64 encoding of their screenshot. Pipe the output into a file and use `./exfiltrated_data/reverse_shell/Base62_Decoder.sh` to decode the files.)
+2. `transfer` (Similar to `screenshot` but transfers files. Must use absolute path.)
+3. `rm-all` (Removes connection and deletes all files. Leaving no trace.)
 
 ## Moving On
 
