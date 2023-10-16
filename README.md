@@ -23,7 +23,27 @@ You need to have the following on your VPS or attacker machine:
 1. Python3
 2. Internet Connection
 
-## Initial Setup
+## Setup
+
+For this demo/tutorial we will be focussing on the basic script to get you started. Use what you know and have learned to make your own attack methods. Be creative!
+
+The file we are foccusing on is `./scripts/The-Go-To.ino` where we will enable scripts on the victims machine and return a persistent reverse shell to us, the attacker.
+
+### Seting Up your VPS
+
+Setup a `Digital Ocean VPS Droplet` with Ubuntu LTS and perform a full upgrade.
+
+Clone this repository into the droplet and go into the directory.
+
+![The frameworks home directory](./README_img/home_directory.png)
+
+### Modifying Files
+
+There are two files we need to modify for this demo: `./payloads/payload.ps1` and `./scritps/The-Go-To.ino`.
+
+Within the files, you will find either `[FILE_SERVER]` or `[IP_ADDRESS]`.
+
+In `payloads.ps1`, just change it to the VPS's IP address. In `The-Go-To.ino`, change it to `http://<IP_ADDRESS>`.
 
 ### Your Attacker VPS
 
@@ -37,6 +57,8 @@ Within the `payloads/` directory, host a simple HTTP server using Python3 using:
 cd payloads
 python3 -m http.server 80
 ```
+
+![Hosting the fileserver.](./README_img/hosting_fileserver.png)
 
 *Note: To run this HTTP server after you close the CLI, consider using `screen`. Documentation can be found [here](https://www.gnu.org/software/screen/manual/screen.html).*
 
@@ -56,14 +78,20 @@ Now all you need to do is plug in your `Bad USB` on your victim's machine and le
 nc -lnvp 4444
 ```
 
+![Reverse Shell](./README_img/netcat.png)
+
 ### Exploitation
 
 From here you can perform tasks just as any other reverse shell. There are some additional commands as well:
 
-1. screenshot
-2. transfer
-3. rm-all
+1. screenshot (Returns a Base64 encoding of their screenshot. Pipe the output into a file and use `./exfiltrated_data/reverse_shell/Base62_Decoder.sh` to decode the files.)
+2. transfer (Similar to `screenshot` but transfers files. Must use absolute path.)
+3. rm-all (Removes connection and deletes all files. Leaving no trace.)
 
-For a more detailed and in-depth guide, here is a YouTube video:
+## Moving On
 
-TBD
+There are more things to be added and documented in the future. You can also fork this repo and use it for your own. Knock yourselves out.
+
+## Credits
+
+[TO-DO]
