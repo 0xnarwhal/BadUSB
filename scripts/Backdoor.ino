@@ -1,3 +1,7 @@
+/*
+This script will create a user with the name blanka and their password would be Ping@123.
+This user will be added to the Administrator group and can be used through remote desktop access. 
+*/
 #include "DigiKeyboard.h"
 void setup() {
 }

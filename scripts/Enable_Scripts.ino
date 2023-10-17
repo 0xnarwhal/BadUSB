@@ -1,3 +1,7 @@
+/*
+Always smart to include this at the beginning of your attack USB.
+It activates using scripts in PowerShell.
+*/
 #include "DigiKeyboard.h"
 void setup() {}
 

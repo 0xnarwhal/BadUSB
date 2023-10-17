@@ -1,3 +1,6 @@
+/*
+Steals all known Wi-Fi passwords.
+*/
 #include "DigiKeyboard.h"
 void setup() {
 }
