@@ -94,4 +94,6 @@ There are more things to be added and documented in the future. You can also for
 
 ## Credits
 
-[TO-DO]
+[AFNordal](https://github.com/AFNordal/powershell_reverseTCPshell)
+
+[CedArctic](https://github.com/CedArctic/DigiSpark-Scripts)
