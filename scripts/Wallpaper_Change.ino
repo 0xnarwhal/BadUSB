@@ -1,5 +1,5 @@
 /*
-Superbly harmless. It just changes the background image to a chosen image. You can pick whatever image you want!
+Superbly harmless. It just changes the background image to a chosen image. You can pick whatever image you want! Hace Fun!
 */
 #include "DigiKeyboard.h"
 void setup() {

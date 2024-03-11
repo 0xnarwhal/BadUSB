@@ -1,5 +1,8 @@
 /*
-My simple go to script to get it all started. Remember to change the [FILESERVER] URL to your machines server URL where the payload is hosted.
+My simple go to script to get it all started.
+It will run CMD as administrator and ensure that we enable running scripts. Then, download the payload hosted and run it.
+Remember to change the [FILESERVER] URL to your machines server URL where the payload is hosted.
+Ensure that the fileserver is hosted IN the payloads directory.
 */
 
 #include "DigiKeyboard.h"
