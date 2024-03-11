@@ -104,7 +104,7 @@ It will then decode all the files that you've extracted.
 
 ## Moving On
 
-This is just the start for you. Go crazy. But remember: **hack responsibly**.
+This is just the start for you. Go crazy. But remember: **hack responsibly**. Have fun suckers - *narwhal*
 
 ## Credits
 
