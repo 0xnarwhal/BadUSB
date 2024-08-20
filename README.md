@@ -1,24 +1,58 @@
-# Bad USB Framework
+# The Bad USB Framework
 
 ## DISCLAIMER
 
-This framework is intended for educational purposes. Malicious use of this framework is **NOT** encouraged. If you wish to perform any action on other computers, ensure you have prior approval from the rightful owner. Remember: **hack responsibly.**
+This framework guide is intended for **educational purposes only!** Malicious use of this framework is **NOT** encouraged. If you wish to perform of the actions shown on property that you do not own, ensure you have prior approval from the rightful owner. 
 
-## TLDR
+Remember: **hack responsibly.**
 
-This framework is intended to get you started with scripting your own malicious USB using the `ATTiny85 Digispark scripting`. The entirety of this framework is intended to be used on your attacker machine/VPS. I highly recommend cloning this repository and working off of it. Follow the `Step-by-Step Guide` to fully setup using `DigitalOcean` as the attacker VPS of choice.
+## About The Framework
 
-### NOTE
+This framework is your one-stop-shop to get you up and running to create malicious USBs and start your phishing campaign using accessible and easy to obtain tools:
+
+1. `ATTiny85 Micro Controller`
+2. `Arduino IDE`
+3. `Digital Ocean VPS`
+
+With this guide you will be using this repository in your private VPS (we will be using Digital Ocean) and setting up your "hacker server".
+
+### Disclaimer
 
 > None of this is originally made by me. This is a collection of my favourite scripts out there and modified to suit this framework. To se the original creators, head over to the `Credits` section of this document.
 
 ## Pre-Requisites
 
-You can purchase a pre-made bad USB online or make one your own. **Make sure that it is using an ATTiny85 arduino!**
+You will need the following:
 
-You need the following on your machine to load the scripts onto your USB:
+1. ATTiny85 Micro Controller (You can purchase one online for cheap)
+2. A [Digital Ocean](https://digitalocean.com) account
+3. A computer (Obviously)
 
-1. Arduino IDE configured following this [tutorial](https://startingelectronics.org/tutorials/arduino/digispark/digispark-windows-setup/).
+## Setting Up your PC
+
+Firstly, we will set up your PC to program your ATTiny85.
+
+1. Download and install the latest [Digistump Arduino Release](https://github.com/digistump/DigistumpArduino/releases) by running `Install Drivers.exe`.
+2. Download the latest version of [Arduino IDE](https://docs.arduino.cc/software/ide/).
+3. After install go to `File > Preferences` and under `Additional boards manager URLs` insert the following URL: `https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json`.
+   1. ![File to Preference](./img/file_to_preferences.png)
+   2. ![Additional Board Manager](./img/additional_boards_manager.png)
+   3. > NOTE: If there is already a URL, you can insert multiple URLs by separating them with a semi-colon `;`.
+4. Under `Tools > Board: > Board Manager`, select `Digistump AVR Boards` and install.
+   1. ![Getting to Boards Manager](./img/install_digistump.png)
+   2. ![Installing Digistump](./img/install_digistump2.png)
+5. You're ready to program your ATTiny85!
+
+## Programming the Bad USB
+
+Under the `scripts` folder, it contains various Arduino scripts to get you started on your journey of programming bad USBs. For the sake of simplicity, we will be using `The-Go-To.ino` file. It is a script sequence to provide us, the attacker, a reverse shell instance from our victim.
+
+1. To begin, select the correct board by selecting `Tools > Board > Digistump AVR Boards > Digispark (Default - 16.5mhz)`.
+2. Copy and paste the script into the Arduino IDE.
+   1. Be sure to change the `[FILE SERVER]` to your VPS' (aka hacker machine) IP address. For example: `http://999.999.999.999`. If the port is not port 80, specify the port as well.
+   2. For VPS IP address, see `Setting Up our Hacker Machine`.
+3. Then click `Upload` and once prompted to plug in the USB, do so. It should take at most 5 seconds to program. Once done, remove the USB.
+4. Now it is primed to be used at your own discretion. All you have to do is plug it in to your victim's machine.
 
 You need to have the following on your VPS or attacker machine:
 
@@ -31,7 +65,7 @@ For this demo/tutorial we will be focussing on the basic script to get you start
 
 The file we are focusing on is `./scripts/The-Go-To.ino` where we will enable scripts on the victims machine and return a persistent reverse shell to us, the attacker.
 
-### Seting Up your VPS
+### Setting Up your VPS
 
 Setup a `Digital Ocean VPS Droplet` with Ubuntu LTS and perform a full upgrade.
 
@@ -41,7 +75,7 @@ Clone this repository into the droplet and go into the directory.
 
 ### Modifying Files
 
-There are two files we need to modify for this demo: `./payloads/payload.ps1` and `./scritps/The-Go-To.ino`.
+There are two files we need to modify for this demo: `./payloads/payload.ps1` and `./scripts/The-Go-To.ino`.
 
 Within the files, you will find either `[FILE_SERVER]` or `[IP_ADDRESS]`.
 
