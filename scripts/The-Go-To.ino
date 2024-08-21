@@ -34,6 +34,6 @@ void loop() {
     DigiKeyboard.delay(2000);
 
     for (;;) {
-        /*Stops the digispark from running the scipt again*/
+        /*Stops the DigiSpark from running the script again*/
     }
 }
