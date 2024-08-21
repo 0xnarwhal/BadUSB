@@ -6,7 +6,7 @@
 
 ## DISCLAIMER
 
-This framework guide is intended for **educational purposes only!** Malicious use of this framework is **NOT** encouraged. If you wish to perform of the actions shown on property that you do not own, ensure you have prior approval from the rightful owner. 
+This framework guide is intended for **educational purposes only!** Malicious use of this framework is **NOT** encouraged. If you wish to perform of the actions shown on property that you do not own, ensure you have prior approval from the rightful owner.
 
 Remember: **hack responsibly.**
 
