@@ -2,7 +2,7 @@
 
 ## Project is EOL
 
-Thanks for the support to whoever starred this repository. I am officially closing this project. It will see a few clean ups here and there in the next few days, but once that's done, it's all done. You will still be able to use the framework and I don't foresee it being obsolete any time soon.
+Thanks for the support. I am officially closing this project. It will see a few clean ups here and there in the next few days, but once that's done, it's all done. You will still be able to use the framework and I don't foresee it being obsolete any time soon.
 
 ## DISCLAIMER
 
@@ -16,7 +16,7 @@ Remember: **Hack Responsibly.**
 
 This framework is your one-stop-shop to get you up and running to create malicious USBs.
 
-This guide will walk you through on setting up and creating your very own USB using the `ATTiny85 Micro Controller`. At the end of the document, I will detail a phishing campaign you can set up using the provided script `The-Go-To.ino`. This is my personal favorite for demonstrations. I will not be guiding you on how to set it up as I feel it is your own duty to be ready and knowledgeable to take on the responsibility.
+This guide will walk you through on setting up and creating your very own USB using the `ATTiny85 Micro Controller`. At the end of the document, I will detail a phishing campaign you can set up using the provided script `The-Go-To.ino`. This is my personal favorite for demonstrations. I will not be guiding you on how to set that up as I feel it is your own duty to be ready and knowledgeable to take on the responsibility.
 
 ## Pre-Requisites
 
@@ -25,7 +25,7 @@ You will need the following:
 1. ATTiny85 Micro Controller USB Device (You can purchase one online for cheap or make your own. There are countless sellers and tutorials out there)
 2. Fundamentals of [Networking](https://www.netacad.com/courses/networking-basics), USB, [Computers](https://edu.gcfglobal.org/en/computerbasics/what-is-a-computer/1/), [Powershell](https://blog.netwrix.com/powershell-scripting-tutorial/), [Bash](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/), and [Ethical and Responsible Hacking](https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/what-is-ethical-hacking/)
    1. **DO NOT SKIP THIS!** This will help you with troubleshooting and practicing safe ethical hacking. We are not here to build script-kiddies, but smart and responsible hackers. 
-   2. If you get stuck and come to me with *"uHhh tHerE iS aN iSSuE"*, I will know you didn't get the fundamentals down and I will not tolerate such behavior.
+   2. If you get stuck and come to me with *"uHhh tHerE iS aN iSSuE with \<insert basic issue\>"*, you didn't get the fundamentals down and I will not entertain you.
 
 ## Setting Up your PC
 
@@ -44,13 +44,15 @@ Firstly, we will set up your PC to program your ATTiny85.
 
 ## A Simple Prank: Changing the Wallpaper
 
-Now we can focus on programming your malicious USB. Back to your personal computer, under the `scripts\` folder, it contains various Arduino scripts to get you started on your journey of programming bad USBs. For the sake of simplicity, we will be using `Wallpaper_Change.ino` file. It is a script sequence change the current wallpaper to another of our own choosing.
+Now we can focus on programming your malicious USB. Under the `scripts\` folder, it contains various Arduino scripts to get you started on your journey of programming bad USBs. For the sake of simplicity, we will be using `Wallpaper_Change.ino` file. It is a script sequence to change the current wallpaper to another of your own choosing.
 
 1. To begin, select the correct board by selecting `Tools > Board > Digistump AVR Boards > Digispark (Default - 16.5mhz)`.
 2. Copy and paste the script into the Arduino IDE.
    1. You can change the URL where the image will be downloaded from if you'd like.
 3. Then click `Upload` and once prompted to plug in the USB, do so. It should take at most 5 seconds to program. Once done, remove the USB.
 4. Now it is primed to be used at your own discretion. All you have to do is plug it in to your victim's machine.
+
+> **PLEASE READ THE SCRIPT AND UNDERSTAND IT FIRST TO KNOW WHAT IT IS DOING EXACTLY. DO NOT BLINDLY USE CODE YOU DON'T KNOW! PRACTICE RESPONSIBLE CODING!**
 
 ## The Attack
 
@@ -60,9 +62,9 @@ Just plug it in and watch the magic.
 
 This is just the start for you. Go crazy. But remember: **Hack Responsibly**. Educate yourself first before attempting anything. If you don't understand what you are doing or why you're doing it, stop and learn. It is also good practice for anything in the future.
 
-### Advanced Project
+### Advance Project
 
-Have a look at the `The-Go-To.ino` script. It is my favorite demonstration to show how devastating this USB can be. I am not going to show you how to do it. You will have to learn the following to make it make any remote sense and understand what it does. Only then, should you be able to set the project up yourself.
+Have a look at the `The-Go-To.ino` script. It is my favorite demonstration to show how devastating this USB can be. I am not going to show you how to do it. You will have to learn the following to make any remote sense and understand what it does. Only then, should you allow yourself to set the project up.
 
 #### Things to Study
 
